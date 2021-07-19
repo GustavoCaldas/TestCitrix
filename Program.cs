@@ -16,7 +16,7 @@ namespace CS_Setup
             foreach (string subkey_name in key.GetSubKeyNames())
             {
                 RegistryKey subkey = key.OpenSubKey(subkey_name);
-                if (subkey.GetValue("DisplayName") != null && subkey.GetValue("DisplayName").ToString().Contains("IDGo"))
+                if (subkey.GetValue("DisplayName") != null)
                 {
                     Console.WriteLine(subkey.GetValue("DisplayName"));
                 }
@@ -25,7 +25,7 @@ namespace CS_Setup
             foreach (string subkey64_name in key64.GetSubKeyNames())
             {
                 RegistryKey subkey64 = key64.OpenSubKey(subkey64_name);
-                if (subkey64.GetValue("DisplayName") != null && subkey64.GetValue("DisplayName").ToString().Contains("Citrix"))
+                if (subkey64.GetValue("DisplayName") != null)
                 {
                     Console.WriteLine(subkey64.GetValue("DisplayName"));
                 }
